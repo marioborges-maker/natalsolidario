@@ -1,38 +1,97 @@
-.App {
+.Container{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.HeroSection{
+  display: flex;
+  background-color: #FFE9E8;
+  padding-top: 80px;
+  gap: 126px;
+  justify-content: space-around;
+  padding-bottom: 60px;
+}
+
+.HeroSection h1{
+  font-size: 36px;
+  color: #121214;
+}
+
+.HeroSection span{
+  color:#CD3C32;
+}
+
+.HeroSection p{
+  font-size: 20px;
+  color: #121214;
+  padding-bottom: 40px;
+}
+
+.BtnLogin{
+  background-color: #CD3C32;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px;
+  width: 238px;
+  height: 49px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.TimeoutSection{
+  padding-top: 60px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TimeoutSection h1{
+  font-size: 36px;
+  color: #121214;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.TimeoutSection p{
+  font-size: 20px;
+  color: #121214;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.TimeoutSection h2{
+  color: #CD3C32;
+  text-align: center;
+  font-size: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.LastSection{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  padding-top: 160px;
+  gap: 126px;
+  padding-bottom: 80px;
 }
 
-.App-link {
-  color: #61dafb;
+.LastSection h1{
+  font-size: 36px;
+  color: #121214;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.LastSection p{
+  font-size: 20px;
+  color: #121214;
+  padding-bottom: 30px;
+}
+
+.FooterSection{
+  background-color: #FFE9E8; 
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 340px;
 }
