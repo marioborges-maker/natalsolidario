@@ -6,14 +6,12 @@ import Dashboard from "./pages/Dashboard";
 
 function RoutesApp(){
     return(
-        <BrowserRouter>
             <Routes>
                 <Route path="/" element={ <Home />}/>
                 <Route path="/Login" element={ <SignIn /> }/>
                 <Route path="/Cadastro" element={ <SignUp />}/>
                 <Route path="/Dashboard" element={ <Dashboard />}/>
             </Routes>
-        </BrowserRouter>
     )
 }
 
