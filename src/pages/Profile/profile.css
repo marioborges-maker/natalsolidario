@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    background-color: #FFE9E8;
+    border-radius: 5px;
+    padding: 0.8em;
+    align-items: center;
+    margin-bottom: 1em;
+    max-width: 400px;
+}
+
+.form-profile input, textarea, select{
+    margin-bottom: 1em;
+    padding: 0.7em;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-profile input:disabled{
+    cursor: not-allowed;
+}
+
+.form-profile button{
+    margin-bottom: 10px;
+}
+
+.logout-btn{
+    background-color: #FFFFFF;
+    color: #CD3C32;
+}

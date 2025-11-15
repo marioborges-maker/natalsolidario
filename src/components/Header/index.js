@@ -18,9 +18,9 @@ export default function Header(){
                 <FiUser className='icon' color='#CD3C32' size={24}/>
                 Usuários
             </Link>
-            <Link to="/settings">
+            <Link to="/Profile">
                 <FiSettings color='#CD3C32' size={24}/>
-                Configurações
+                Perfil
             </Link>
         </div>
     )
