@@ -4,8 +4,11 @@ import Title from '../../components/Title'
 import { FiPlusCircle } from 'react-icons/fi'
 import {AuthContext} from '../../contexts/auth'
 import { db } from '../../services/firebaseConnection'
-import { collection, getDocs, getDoc, doc } from 'firebase/firestore'
+import { collection, getDocs, getDoc, doc, addDoc } from 'firebase/firestore'
+import { toast } from 'react-toastify'
+
 import './new.css'
+
 
 const listRef = collection(db, "customers");
 
@@ -65,6 +68,28 @@ export default function New(){
         setDoadorSelect(e.target.value);
     }
 
+    async function handleRegister(e){
+        e.preventDefault();
+        await addDoc(collection(db, "coletas"), {
+            created: new Date(),
+            doador: doador[doadorSelect].nome,
+            doadorId: doador[doadorSelect].id,
+            tipo: tipo,
+            observacao: observacao,
+            status: status,
+            userId: user.uid,
+        })
+        .then(() => {
+            toast.success("Coleta registrada!")
+            setObservacao("");
+            setDoadorSelect(0)
+        })
+        .catch((error) => {
+            console.log(error)
+            toast.error("Ops! Erro ao registrar coleta.")
+        })
+    }
+
     return(
         <div>
             <Header/>
@@ -73,7 +98,7 @@ export default function New(){
                     <FiPlusCircle size={25}/>
                 </Title>
                 <div className='container'>
-                    <form className='form-profile'>
+                    <form className='form-profile' onSubmit={handleRegister}>
                         <label>Doador</label>
                         { loadCustomers ? (
                             <input type='text' disabled={true} value="Carregando"/>
